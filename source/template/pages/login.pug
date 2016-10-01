@@ -1,0 +1,25 @@
+extends ../_template
+
+block variables
+	- var title = 'Login page'
+
+block content
+	.auth-link
+		p.text Авторизоваться
+
+	.login-container
+		h1 Авторизуйтесь
+		form.auth-form
+			input.auth-form__login(type="text" name="login" placeholder="Логин")
+			input.auth-form__password(type="password" name="password" placeholder="Пароль")
+			input.auth-form__checkbox(type="checkbox")
+			input.auth-form__radio(type="radio")
+				
+			.home-menu
+				ul.home-menu__list
+					li.home-menu__item
+						a(href="#").home-menu__link Наглавную
+					li.home-menu__item
+						a(href="#").home-menu__link Войти
+
+	+copyright

@@ -1,0 +1,52 @@
+extends ../_template
+
+block variables
+	- var title = 'About page'
+
+block content
+	.header
+		.header__top
+			.social-buttons
+				a.social-buttons__vk
+				a.social-buttons__gh
+				a.social-buttons__li
+			.hamburger
+				input(type="checkbox" id="hmt").hidden-menu-ticker
+				label(for="hmt").btn-hidden-menu
+					span.line-hamb
+					span.line-hamb
+					span.line-hamb
+		.author-photo
+			img.author-photo__img
+		.author-name
+				h2.headline2 Темир Нурбаев
+				p.text Личный сайт веб-разработчика
+		button.arrow-down
+
+		.container.about-block
+			.about-me
+				h1.headline1 Обо мне
+				.about-me__photo-wrap
+					img.about-me__photo
+				h2.headline2 Кто я
+				.about-me__text
+					p.text Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+					p.text Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+
+			.skills
+				h2.headline2 Чем я могу быть<br>вам полезен
+				p.text
+				.skills__circles
+					.skills__frontend
+					.skills__backend
+					.skills__workflow
+
+			.contacts
+				.contacts__info
+					h1.headline
+					ul.contacts__list
+						li.contacts__item
+						li.contacts__item
+						li.contacts__item
+						li.contacts__item
+			+footer

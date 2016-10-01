@@ -1,7 +1,52 @@
 extends ../_template
 
 block variables
-  - var title = 'Home page'
+	- var title = 'Home page'
 
 block content
-  include ../common/_greating
+	.auth-link.text Авторизоваться
+
+	.author-info
+		.author-photo
+			img(src="assets/img/avatar200.jpg").author-photo__img
+		.author-info__name Темир Нурбаев
+		.author-info__descr Личный сайт веб-разработчика
+
+		.social_welcome
+			+social
+
+		.home-menu
+			ul.home-menu__list
+				li.home-menu__item
+					a(href="#").home-menu__link Мои работы
+				li.home-menu__item
+					a(href="#").home-menu__link Обо мне
+				li.home-menu__item
+					a(href="#").home-menu__link Блог
+
+	//- Этот контейнер заменяет домашний при нажатии на кнопку "Авторизоваться"
+	.login-container
+		h1.headline1 Авторизуйтесь
+		form.auth-form
+			input.auth-form__login(type="text" name="login" placeholder="Логин")
+			input.auth-form__password(type="password" name="password" placeholder="Пароль")
+			input.auth-form__checkbox(type="checkbox")
+			input.auth-form__radio(type="radio")
+				
+			.home-menu
+				ul.home-menu__list
+					li.home-menu__item
+						a(href="#").home-menu__link Наглавную
+					li.home-menu__item
+						a(href="#").home-menu__link Войти
+
+	
+	.copyright-home
+		+copyright
+
+
+//- // - var home-menu = ['Мои работы', 'Обо мне', 'Обо мне']
+//- // each value in home-menu
+//- // 	ul.home-menu__list
+//- // 				li.home-menu__item
+//- // 					a(href="#").home-menu__link= value

@@ -1,0 +1,27 @@
+mixin copyright
+	.copyright &#169; Темир Нурбаев | Создано с любовью в LoftSchool | 2016
+
+mixin footer
+	footer.footer
+		.footer__top
+			ul.footer__menu
+				li.footer__item
+				li.footer__item
+				li.footer__item
+				li.footer__item
+			.social-buttons_circles
+				a.social-buttons__vk
+				a.social-buttons__gh
+				a.social-buttons__li
+		.footer__bottom
+			p.text
+			+copyright
+
+mixin social
+	ul.social
+		li.social__item
+			a(href="https://vk.com/temir.nurbaev" target="_blank").social__link <i class="fa fa-vk" aria-hidden="true"></i>
+		li.social__item
+			a(href="https://github.com/TemirNurbaev" target="_blank").social__link <i class="fa fa-github-alt" aria-hidden="true"></i>
+		li.social__item
+			a(href="https://ru.linkedin.com/in/nurbaev" target="_blank").social__link <i class="fa fa-linkedin" aria-hidden="true"></i>
