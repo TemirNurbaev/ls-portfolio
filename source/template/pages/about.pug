@@ -4,17 +4,36 @@ block variables
 	- var title = 'About page'
 
 block content
-	.header
+	header.header
 		.header__social
 			+social
 		.header__burger
 			button.burger-btn
-			input(type="checkbox" id="hmt").hidden-menu-ticker
-			label(for="hmt").btn-hidden-menu
-				span.line-burger
-				span.line-burger
-				span.line-burger
+				span.burger-btn__line
 
+		.avatar-wrapper
+			.author-photo
+				img(src="assets/img/avatar200.jpg").author-photo__img
+			.author-name.author-name_white Темир Нурбаев
+			.author-descr.author-descr_white Личный сайт веб-разработчика
+		
+		.header__triangle-wrapper
+			.header__triangle.header__triangle_left
+				svg(xlmns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1 1" preserveAspectRatio="none")
+					polygon(points="0,0 1,1 0,1")
+			.header__triangle.header__triangle_right
+				svg(xlmns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1 1" preserveAspectRatio="none")
+					polygon(points="1,0 1,1 0,1")
+
+		.header__arrow-down
+			a.header__arrow-down-link(href="#")
+				.arrow-down
+
+	.about-wrapper
+		section.aboutme
+			+section-headline1("Обо мне")
+		section.skills
+			+section-headline2("Чем я могу быть вам полезен")
 
 		//- .author-photo
 		//- 	img.author-photo__img
