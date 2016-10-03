@@ -47,6 +47,8 @@ ol, ul {
 
 a {
 	text-decoration: none;
+	font-family: $font-family;
+	color: $textColor;
 }
 
 .text {
@@ -72,12 +74,11 @@ a {
 
 .headline1 {
 	font-size: 63px;
-	margin: 70px 0;
 }
 
 .headline2 {
 	font-size: 35px;
-	margin-bottom: 40px;
+	margin: 0 0 15px 0;
 }
 
 // Заголовок со штрихами
@@ -147,6 +148,7 @@ a {
 	font-size: 28px;
 	margin-left: 20px;
 	opacity: 0.5;
+	cursor: pointer;
 
 	&:hover {
 		opacity: 1;
@@ -171,4 +173,5 @@ a {
 @import 'common/sprite';
 @import 'common/index';
 @import 'common/about';
+@import 'common/blog';
 

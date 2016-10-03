@@ -1,9 +1,13 @@
+.header_portfolio-bg {
+	background: url(../img/portfolio_bg.png) no-repeat center;
+	background-size: contain;
+}
+
 .header {
 	height: 100vh;
-	background: url(../img/portfolio_bg.png) no-repeat center rgba(#016672, .3);
-	background-size: contain;
 	position: relative;
 	min-height: 650px;
+	background-color: rgba(#016672, .3);
 }
 
 .header__social {
