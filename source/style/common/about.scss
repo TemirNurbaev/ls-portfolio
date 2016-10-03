@@ -140,7 +140,6 @@ a.header__arrow-down-link {
 	display: table-cell;
 	width: 50%;
 	@extend %clearfix;
-	padding-bottom: 30px;
 }
 
 .cell_left {
@@ -150,6 +149,10 @@ a.header__arrow-down-link {
 
 .cell_right {
 	background-color: #eeebdf;
+}
+
+.cell_about {
+	padding-bottom: 30px;
 }
 
 // Секция "Обо мне" (слева)
