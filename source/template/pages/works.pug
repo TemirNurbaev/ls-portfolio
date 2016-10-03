@@ -1,0 +1,38 @@
+extends ../_template
+
+block variables
+	- var title = 'Works page'
+
+block content
+	.header_portfolio-bg
+		header.header
+			.header__social
+				+social
+			.header__burger
+				button.burger-btn
+					span.burger-btn__line
+
+			.avatar-wrapper
+				.author-photo
+					img(src="assets/img/avatar200.jpg").author-photo__img
+				.author-name.author-name_white Темир Нурбаев
+				.author-descr.author-descr_white Личный сайт веб-разработчика
+			
+			.header__triangle-wrapper
+			.header__triangle.header__triangle_left.header__triangle_white
+				svg(xlmns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1 1" preserveAspectRatio="none")
+					polygon(points="0,0 1,1 0,1")
+			.header__triangle.header__triangle_right.header__triangle_white
+				svg(xlmns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1 1" preserveAspectRatio="none")
+					polygon(points="1,0 1,1 0,1")
+
+			.header__arrow-down
+				a.header__arrow-down-link(href="#")
+					.arrow-down
+
+	.page-title
+		.section-headline1
+			.section-headline__inner1.section-headline__inner1_works Мои работы
+
+	.slider
+		
