@@ -29,28 +29,44 @@ block content
 			a.header__arrow-down-link(href="#")
 				.arrow-down
 
-	.about-wrapper
-		section.aboutme
-			+section-headline1("Обо мне")
-		section.skills
-			+section-headline2("Чем я могу быть вам полезен")
-
-		//- .author-photo
-		//- 	img.author-photo__img
-		//- .author-name
-		//- 		h2.headline2 Темир Нурбаев
-		//- 		p.text Личный сайт веб-разработчика
-		//- button.arrow-down
-
-		//- .container.about-block
-		//- 	.about-me
-		//- 		h1.headline1 Обо мне
-		//- 		.about-me__photo-wrap
-		//- 			img.about-me__photo
-		//- 		h2.headline2 Кто я
-		//- 		.about-me__text
-		//- 			p.text Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-		//- 			p.text Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+	.table
+		.row
+			.cell.cell_left
+				//- .test Тестовый див
+				section.aboutme
+					+section-headline1("Обо мне")
+					.aboutme__content
+						.aboutme__photo
+							img.aboutme__img(src="assets/img/avatar400.jpg")
+						+section-headline2("Кто я")
+						p.text Я веб разработчик из Росии. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+						p.text Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+			.cell.cell_right
+				//- .test Тестовый див
+				section.skills
+					+section-headline2("Чем я могу быть вам полезен")
+					p.text Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+					.skills__block
+						.skills__title Frontend
+						.skills__diagrams
+							ul.skills__list
+								li.skills__item
+								li.skills__item
+								li.skills__item
+						.skills__title Backend
+						.skills__diagrams
+							ul.skills__list
+								li.skills__item
+								li.skills__item
+								li.skills__item
+								li.skills__item
+						.skills__title Workflow
+						.skills__diagrams
+							ul.skills__list
+								li.skills__item
+								li.skills__item
+								li.skills__item
+					
 
 		//- 	.skills
 		//- 		h2.headline2 Чем я могу быть<br>вам полезен
@@ -69,3 +85,21 @@ block content
 		//- 				li.contacts__item
 		//- 				li.contacts__item
 		//- 	+footer
+
+	section.map
+		.contacts
+			+section-headline2('Контакты')
+			ul.contacts__list
+				li.contacts__item
+					span.contacts__icon <i class="fa fa-skype" aria-hidden="true"></i>
+					a(href="skype:hotice5551?add") temir_n
+				li.contacts__item
+					span.contacts__icon <i class="fa fa-envelope" aria-hidden="true"></i>
+					a(href="mailto:temir1.618@gmail.com") temir1.618@gmail.com
+				li.contacts__item
+					span.contacts__icon <i class="fa fa-phone" aria-hidden="true"></i>
+					a(href="tel:+79999999999") +7 999 999 99 99
+				li.contacts__item
+					span.contacts__icon <i class="fa fa-map-marker" aria-hidden="true"></i>
+					| г. Краснодар
+	include footer.pug

@@ -121,4 +121,127 @@ a.header__arrow-down-link {
 	transform: rotate(45deg);
 }
 
+// Секция "Обо мне" и "Навыки"
+.table {
+	display: table;
+	width: 100%;
+}
 
+.row {
+	display: table-row;
+	width: 100%;
+}
+
+.cell {
+	display: table-cell;
+	width: 50%;
+	@extend %clearfix;
+	padding-bottom: 30px;
+}
+
+.cell_left {
+	background-color: #efeee9;
+	
+}
+
+.cell_right {
+	background-color: #eeebdf;
+}
+
+// Секция "Обо мне" (слева)
+.aboutme .section-headline1 {
+	margin: 0 auto  60px;
+	background: url(../img/about_header.png) center center no-repeat;
+	background-size: contain;
+}
+
+.skills .section-headline2 {
+	margin: 0 auto  30px;
+	max-width: 240px;
+}
+
+.aboutme__content {
+	max-width: 443px;
+	margin: 0 auto;
+}
+
+.aboutme__photo {
+	width: 100%;
+	margin-top: 0;
+	overflow: hidden;
+	text-align: center;
+}
+
+.aboutme__img {
+	width: 100%;
+}
+
+.skills {
+	padding-left: 40px;
+}
+
+.skills__diagrams {
+	margin-bottom: 30px;
+}
+
+.skills__title {
+	font: 28px 'robotomedium', Arial, sans-serif;
+	margin-bottom: 10px;
+}
+
+.skills__item {
+	display: inline-block;
+	margin-left: 35px;
+	width: 110px;
+  	height: 110px;
+  	background: url(../img/Ellipse_skill.png) top left;
+  	background-size: contain;
+
+	&:first-child {
+		margin-left: 0;
+	}
+}
+
+// Секция контакты (с картой)
+
+.map {
+	width: 100%;
+	height: 100vh;
+	background: url(../img/map.jpg);
+	background-size: cover;
+	position: relative;
+}
+
+.contacts {
+	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+  	width: 380px;
+  	background-color: rgba(252, 252, 252, 0.85);
+  	border-radius: 5px;
+  	padding: 0 40px 40px;
+}
+
+.contacts__item {
+	font-family: "robotomedium", Arial, sans-serif;
+	margin-top: 15px;
+
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+.contacts__icon {
+	font-size: 22px;
+	color: $accentColor;
+	margin-right: 10px;
+}
+
+.contacts__item a {
+	color: $textColor;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
