@@ -1,26 +1,26 @@
 // media
 @mixin wide() {
-  @media screen and (min-width: 1601px) {
+  @media screen and (min-width: 1601PX) {
     @content;
   }
 }
 @mixin desktop() {
-  @media screen and (max-width: 1600px) {
+  @media screen and (max-width: 1600PX) {
     @content;
   }
 }
 @mixin laptop() {
-  @media screen and (max-width: 992px) {
+  @media screen and (max-width: 992PX) {
     @content;
   }
 }
 @mixin tablet() {
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 768PX) {
     @content;
   }
 }
 @mixin phone() {
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 480PX) {
     @content;
   }
 }
