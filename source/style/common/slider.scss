@@ -1,22 +1,11 @@
-.page-title {
-	width: 100%;
-	height: 184px;
-	background: url(../img/works_header.png) center center no-repeat;
-	background-color: #fff;
-}
-
-.section-headline__inner1_works {
-	margin: 0 auto;
-	line-height: 184px;
-}
-
-.row_slider {
+.slider {
 	height: 100vh;
+	min-height: 650px;
 }
 
 .slider__descr-container {
 	width: 100%;
-	min-height: 650px;
+	height: 100%;
 	display: flex;
 }
 
@@ -31,16 +20,21 @@
 
 .slider__descr-tags {
 	width: 100%;
-	height: 51px;
+	min-height: 51px;
 	border-top: 1px solid;
 	border-bottom: 1px solid;
 	border-color: rgba(0, 150, 136, 0.3);
+	margin-bottom: 40px;
+}
+
+.slider__descr-tags-inner {
+	width: 100%;
 	text-align: center;
-	line-height: 51px;
 	text-transform: uppercase;
 	color: $accentColor;
 	font-family: 'robotomedium';
-	margin-bottom: 40px;
+	display: inline-block;
+	vertical-align: middle;
 }
 
 .slider__button {
@@ -65,37 +59,69 @@
 	margin-right: 10px;
 }
 
-.slider__big-image {
-	height: 525px;
-	text-align: center;
+
+// Правая часть слайдера
+
+.slider__images {
+	height: 100%;
 }
 
-.row_slider-items {
-	height: 225px;
+.slider__big-image {
+	height: 70%;
+	text-align: center;
 }
 
 .slider__display-image {
 	max-width: 100%;
 }
 
-.slider__small-image {
+.slider__list {
+	height: 30%;
+	width: 100%;
+	position: relative;
+	@extend %clearfix;
+}
 
-	&::after {
+.slider__control {
+	float: left;
+	width: 50%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+
+	&::before {
 		content: "";
 		display: block;
 		background-color: rgba(#b6b4ae, 0.7);
 		position: absolute;
 		top:0;
 		left: 0;
+		height: 100%;
+		width: 100%;
+		z-index: 1;
+	}
+
+	&::after {
+		content: "";
+		width: 26px;
+		height: 26px;
+		border: solid #fff;
+		border-width: 0 8px 8px 0;
+		transform: rotate(45deg);
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-top: -13px;
+		margin-left: -13px;
+		z-index: 2;
 	}
 }
 
+.slider__control_next {
 
-// Что говорят обо мне
-
-.reviews {
-	width: 100%;
-	background: url(../img/reviews_bg.jpeg) bottom center no-repeat #fff;
-	background-size: cover;
-	height: 1136px;
+	&::after {
+		border-width: 8px 0 0 8px;
+		transform: rotate(45deg);
+	}
 }

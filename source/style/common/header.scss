@@ -1,0 +1,131 @@
+.header {
+	height: 100vh;
+	position: relative;
+	min-height: 650px;
+	background: url(../img/body-header-bg.jpg) top center no-repeat;
+  	background-size: cover;
+}
+
+// Фон буквами Portfolio
+.header_portfolio-bg {
+	width: 100%;
+	height: 100%;
+	background: url(../img/portfolio_bg.png) no-repeat center;
+	background-size: contain;
+	background-color: rgba(#016672, .3);
+}
+
+.header__social {
+	position: absolute;
+	top: 20px;
+	left: 30px;
+}
+
+.header__burger {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+}
+
+.burger-btn {
+	width: 40px;
+	height: 35px;
+	position: relative;
+	cursor: pointer;
+	outline: none;
+	border: 0;
+	padding: 0;
+	background: 0 center;
+	opacity: 0.5;
+	transition: opacity 0.2s linear;
+
+	&:hover {
+		opacity: 1;
+	}
+}
+
+.burger-btn__line, .burger-btn__line::before, .burger-btn__line::after {
+	width: 100%;
+	height: 5px;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	background-color: #fff;
+	border-radius: 2.5px;
+	content: "";
+}
+
+.burger-btn__line {
+	&::before {
+		top: -15px;
+	}
+	&::after {
+		top: 15px;
+	}
+}
+
+.author-name_white, .author-descr_white {
+	color: #fff;
+}
+
+.author-descr_white {
+	font-family: 'robotolight';
+}
+
+.avatar-wrapper {
+	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+}
+
+.header__triangle {
+	width: 50%;
+	position: absolute;
+	bottom: 0;
+}
+
+.header__triangle svg {
+	width: 100%;
+	height: 100px;
+	position: absolute;
+	bottom: 0;
+}
+
+.header__triangle_left svg {
+	fill: #EFEEE9;
+}
+
+.header__triangle_right svg {
+	fill: #EDEADE;
+}
+
+.header__triangle_left {
+	left: 0;
+}
+
+.header__triangle_right {
+	right: 0;
+}
+
+.header__arrow-down-link {
+	display: block;
+	position: absolute;
+	bottom: 70px;
+	left: 50%;
+	transform: translate(-50%, 0px);
+	opacity: 0.7;
+
+	&:hover {
+		opacity: 1;
+	}
+}
+
+// Фигурка стрелки на CSS
+.arrow-down {
+	width: 19px;
+	height: 19px;
+	border: solid #fff;
+	border-width: 0 6px 6px 0;
+	transform: rotate(45deg);
+}

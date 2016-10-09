@@ -4,59 +4,60 @@ block variables
 	- var title = 'Home page'
 
 block content
-	.auth-link.text Авторизоваться
-	.flip-container
-		.flipper
-			.author-info
-				.author-photo
-					img(src="assets/img/avatar200.jpg").author-photo__img
-				.author-name Темир Нурбаев
-				.author-descr Личный сайт веб-разработчика
+	.header_welcome
+		.auth-link.text Авторизоваться
+		.flip-container
+			.flipper
+				.author-info
+					.author-photo
+						img(src="assets/img/avatar200.jpg").author-photo__img
+					.author-name Темир Нурбаев
+					.author-descr Личный сайт веб-разработчика
 
-				.social_welcome
-					+social
+					.social_welcome
+						+social
 
-				.home-menu
-					ul.home-menu__list
-						li.home-menu__item
-							a(href="works.html").home-menu__link Мои работы
-						li.home-menu__item
-							a(href="about.html").home-menu__link Обо мне
-						li.home-menu__item
-							a(href="blog.html").home-menu__link Блог
-
-			//- Этот контейнер с авторизацией. Он заменяет домашний при нажатии на кнопку "Авторизоваться"
-			.login-card
-				+section-headline2('Авторизуйтесь')
-				form.auth-form
-					.auth-form__input-wrap
-						input.auth-form__input(type="text" name="login" placeholder="Логин")
-						.auth-form__input-icon <i class="fa fa-user" aria-hidden="true"></i>
-					.auth-form__input-wrap
-						input.auth-form__input(type="password" name="password" placeholder="Пароль")
-						.auth-form__input-icon <i class="fa fa-key" aria-hidden="true"></i>
-					.auth-form__checkbox-wrap
-						input.auth-form__checkbox-custom(type="checkbox" name="iamhuman" id="iamhuman")
-						label.auth-form__checkbox-custom-label(for="iamhuman") Я человек
-					.auth-form__ask-robot Вы точно не робот?
-					.auth-form__radio-wrap
-						.auth-form__radio-group
-							input.auth-form__radio-custom(type="radio" id="norobot-yes" name="norobot" value="yes")
-							label.auth-form__radio-custom-label(for="norobot-yes") Да
-						.auth-form__radio-group
-							input.auth-form__radio-custom(type="radio" id="norobot-no" name="norobot" value="no")
-							label.auth-form__radio-custom-label(for="norobot-no") Не уверен
-						
 					.home-menu
 						ul.home-menu__list
 							li.home-menu__item
-								a(href="#").home-menu__link Наглавную
+								a(href="works.html").home-menu__link Мои работы
 							li.home-menu__item
-								a(href="#").home-menu__link Войти
+								a(href="about.html").home-menu__link Обо мне
+							li.home-menu__item
+								a(href="blog.html").home-menu__link Блог
 
-	
-	.copyright-home
-		+copyright
+				//- Этот контейнер с авторизацией. Он заменяет домашний при нажатии на кнопку "Авторизоваться"
+				.login-card
+					+section-headline2('Авторизуйтесь')
+					form.auth-form
+						.auth-form__input-wrap
+							input.auth-form__input(type="text" name="login" placeholder="Логин")
+							.auth-form__input-icon <i class="fa fa-user" aria-hidden="true"></i>
+						.auth-form__input-wrap
+							input.auth-form__input(type="password" name="password" placeholder="Пароль")
+							.auth-form__input-icon <i class="fa fa-key" aria-hidden="true"></i>
+						.auth-form__checkbox-wrap
+							input.auth-form__checkbox-custom(type="checkbox" name="iamhuman" id="iamhuman")
+							label.auth-form__checkbox-custom-label(for="iamhuman") Я человек
+						.auth-form__ask-robot Вы точно не робот?
+						.auth-form__radio-wrap
+							.auth-form__radio-group
+								input.auth-form__radio-custom(type="radio" id="norobot-yes" name="norobot" value="yes")
+								label.auth-form__radio-custom-label(for="norobot-yes") Да
+							.auth-form__radio-group
+								input.auth-form__radio-custom(type="radio" id="norobot-no" name="norobot" value="no")
+								label.auth-form__radio-custom-label(for="norobot-no") Не уверен
+							
+						.home-menu
+							ul.home-menu__list
+								li.home-menu__item
+									a(href="#").home-menu__link Наглавную
+								li.home-menu__item
+									a(href="#").home-menu__link Войти
+
+		
+		.copyright-home
+			+copyright
 
 
 //- // - var home-menu = ['Мои работы', 'Обо мне', 'Обо мне']

@@ -1,5 +1,5 @@
 @import 'common/fonts';
-// @import 'common/font-awesome/font-awesome.scss';
+@import 'common/mixins';
 
 $textColor: #455a64;
 $accentColor: #00bfa5;
@@ -28,16 +28,20 @@ html {
 html {
   width: 100%;
   height: 100%;
+  font: 16px $font-family;
+  color: $textColor;
+
+  @include phone {
+  	font-size: 14px;
+  }
 }
 
 body {
   margin: 0;
   width: 100%;
   height: 100%;
-  background: url(../img/body-header-bg.jpg) top center no-repeat;
-  background-size: cover;
-  font: 16px $font-family;
-  color: $textColor;
+  // background: url(../img/body-header-bg.jpg) top center no-repeat;
+  // background-size: cover;
 }
 
 ol, ul {
@@ -85,7 +89,7 @@ a {
 // Заголовок со штрихами
 .section-headline2 {
 	text-align: center;
-	margin: 30px auto;
+	margin: 0 auto 30px;
 }
 
 .section-headline1 {
@@ -100,6 +104,8 @@ a {
 	color: $textColor;
 	text-transform: uppercase;
 	font-size: 35px;
+	max-width: 300px;
+	line-height: 1;
 
 	&::before {
 		content: "";
@@ -169,10 +175,15 @@ a {
 	// }
 }
 
+@import 'pages/index';
 
-@import 'common/footer';
 @import 'common/sprite';
-@import 'common/index';
-@import 'common/about';
-@import 'common/blog';
-@import 'common/works';
+@import 'common/header';
+@import 'common/footer';
+
+
+@import 'pages/about';
+@import 'pages/blog';
+@import 'pages/works';
+
+@import 'common/slider';

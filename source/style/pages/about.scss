@@ -1,0 +1,162 @@
+// Секция "Обо мне" и "Навыки"
+.table {
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+
+.table_about {
+
+	@include tablet {
+		max-width: 768px;
+	}
+}
+
+.row {
+	display: table-row;
+	height: 100%;
+	@extend %clearfix;
+}
+
+.cell {
+	display: table-cell;
+	height: 100%;
+	width: 50%;
+	@extend %clearfix;
+}
+
+.cell_left {
+	background-color: #efeee9;
+	
+}
+
+.cell_right {
+	background-color: #eeebdf;
+}
+
+.cell_about {
+	padding-bottom: 30px;
+
+	@include tablet {
+		display: block;
+		width: 100%;
+		padding-top: 48px;
+	}
+}
+
+// Секция "Обо мне" (слева)
+.aboutme .section-headline__wrapper-about {
+	width: 360px;
+	height: 120px;
+	padding-top: 40px;
+	text-align: center;
+	background: url(../img/about_header.png) no-repeat top center;
+	background-size: contain;
+	margin: -37px auto 30px;
+	position: relative;
+	z-index: 999;
+}
+
+.aboutme .section-headline1 {
+	margin: 0 auto  60px;
+}
+
+.skills .section-headline2 {
+	margin: 0 auto  30px;
+	max-width: 240px;
+}
+
+.aboutme__content {
+	max-width: 443px;
+	margin: 0 auto;
+}
+
+.aboutme__photo {
+	width: 100%;
+	margin-bottom: 30px;
+	overflow: hidden;
+	text-align: center;
+}
+
+.aboutme__img {
+	width: 100%;
+}
+
+.skills {
+	padding-left: 40px;
+
+	@include tablet {
+		padding: 0 20px;
+		text-align: center;
+	}
+}
+
+.skills__diagrams {
+	margin-bottom: 30px;
+}
+
+.skills__title {
+	font: 28px 'robotomedium', Arial, sans-serif;
+	margin-bottom: 10px;
+}
+
+.skills__item {
+	display: inline-block;
+	margin-left: 35px;
+	width: 110px;
+  	height: 110px;
+  	background: url(../img/Ellipse_skill.png) top left;
+  	background-size: contain;
+
+	&:first-child {
+		margin-left: 0;
+	}
+}
+
+// Секция контакты (с картой)
+
+.map {
+	width: 100%;
+	height: 100vh;
+	background: url(../img/map.jpg);
+	background-size: cover;
+	position: relative;
+}
+
+.contacts {
+	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+  	width: 380px;
+  	background-color: rgba(252, 252, 252, 0.85);
+  	border-radius: 5px;
+  	padding: 30px 40px 40px;
+
+  	@include tablet {
+  		width: 350px;
+  	}
+}
+
+.contacts__item {
+	font-family: "robotomedium", Arial, sans-serif;
+	margin-top: 15px;
+
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+.contacts__icon {
+	font-size: 22px;
+	color: $accentColor;
+	margin-right: 10px;
+}
+
+.contacts__item a {
+	color: $textColor;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}

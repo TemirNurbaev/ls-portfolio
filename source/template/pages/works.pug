@@ -1,7 +1,7 @@
 extends ../_template
 
 block variables
-	- var title = 'Works page'
+	- var title = 'Мои работы'
 
 block content
 	.header_portfolio-bg
@@ -42,7 +42,8 @@ block content
 						.slider__descr
 							.section-headline2
 								.section-headline__inner2.section-headline__inner2_slider Сайт школы онлайн образования
-							.slider__descr-tags HTML , CSS, JAVASCRIPT
+							.slider__descr-tags
+								p.slider__descr-tags-inner HTML, CSS, JAVASCRIPT
 							button.slider__button
 								span.slider__button-icon <i class="fa fa-link" aria-hidden="true"></i>
 								| Посмотреть сайт
@@ -50,16 +51,47 @@ block content
 					.slider__images
 						.slider__big-image
 							img.slider__display-image(src="assets/img/works_item_1.png")
-						.table
-							.row.row_slider-items
-								.cell.cell_left
-									.slider__small-image
-										img
-								.cell.cell_right
-									.slider__small-image
+						.slider__list
+							a.slider__control.slider__control_prev
+							a.slider__control.slider__control_next
+							
 
-	.reviews
-		.section-headline1
-			.section-headline__inner1 Что говорят обо мне
+	.testimonials
+		.section-headline__wrapper-about
+			.section-headline1
+				.section-headline__inner1 Что говорят обо мне
+
+		.testimonials__list
+			.testimonials__item
+				.testimonials__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+				.testimonials__author
+					.testimonials__avatar
+						img(src="assets/img/kovalchuk_avatar.jpg" alt="")
+					.testimonials__author-info
+						.testimonials__name Ковальчук Дмитрий
+						.testimonials__position основатель LoftSchool
+			.testimonials__item
+				.testimonials__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+				.testimonials__author
+					.testimonials__avatar
+						img(src="assets/img/kovalchuk_avatar.jpg" alt="")
+					.testimonials__author-info
+						.testimonials__name Ковальчук Дмитрий
+						.testimonials__position основатель LoftSchool
+		.contact-card
+			.section-headline2
+				.section-headline__inner2 Связаться со мной
+			.contact-form
+				input.contact-form__input(type="text" name="name" placeholder="Имя")
+				input.contact-form__input(type="text" name="email" placeholder="Email")
+				textarea.contact-form__input.contact-form__input_textarea(type="text" name="message" cols="30" rows="6" placeholder="Ваше сообщение")
+				.contact-form__buttons
+					ul.home-menu__list
+						li.home-menu__item
+							input(type="submit" value="Отправить")#contact-btn.home-menu__link
+						li.home-menu__item
+							input(type="reset" value="Очистить")#contact-btn.home-menu__link
+		a(href="#").arrow-up
+
 
 	include footer

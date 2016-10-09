@@ -4,8 +4,8 @@ block variables
 	- var title = 'About page'
 
 block content
-	.header_portfolio-bg
-		header.header
+	header.header
+		.header_portfolio-bg
 			.header__social
 				+social
 			.header__burger
@@ -26,15 +26,17 @@ block content
 					svg(xlmns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1 1" preserveAspectRatio="none")
 						polygon(points="1,0 1,1 0,1")
 
-			.header__arrow-down
-				a.header__arrow-down-link(href="#")
-					.arrow-down
+		.header__arrow-down
+			a.header__arrow-down-link(href="#")
+				.arrow-down
 
-	.table
+	.table.table_about
 		.row
 			.cell.cell_left.cell_about
 				section.aboutme
-					+section-headline1("Обо мне")
+					.section-headline__wrapper-about
+						.section-headline1
+							.section-headline__inner1 Обо мне
 					.aboutme__content
 						.aboutme__photo
 							img.aboutme__img(src="assets/img/avatar400.jpg")
