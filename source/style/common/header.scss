@@ -98,6 +98,10 @@
 
 .header__triangle_right svg {
 	fill: #EDEADE;
+
+	@include tablet {
+		fill: #EFEEE9;
+	}
 }
 
 .header__triangle_left {
@@ -106,6 +110,10 @@
 
 .header__triangle_right {
 	right: 0;
+}
+
+.header__triangle_white svg {
+	fill: #fff;
 }
 
 .header__arrow-down-link {

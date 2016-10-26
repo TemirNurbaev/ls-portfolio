@@ -49,45 +49,25 @@ block content
 					p.text Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
 					.skills__block
 						.skills__title Frontend
-						.skills__diagrams
-							ul.skills__list
-								li.skills__item
-								li.skills__item
-								li.skills__item
+						ul.skills__list
+							+skillCircle('skills', '50"', 'HTML5')
+							+skillCircle('skills', '50"', 'CSS3')
+							+skillCircle('skills', '50"', 'JavaScript & jQuery')
 						.skills__title Backend
-						.skills__diagrams
-							ul.skills__list
-								li.skills__item
-								li.skills__item
-								li.skills__item
-								li.skills__item
+						ul.skills__list
+							+skillCircle('skills', '50"', 'PHP')
+							+skillCircle('skills', '50"', 'mySQL')
+							+skillCircle('skills', '50"', 'Node.js')
+							+skillCircle('skills', '50"', 'Mongo.db')
 						.skills__title Workflow
-						.skills__diagrams
-							ul.skills__list
-								li.skills__item
-								li.skills__item
-								li.skills__item
-					
+						ul.skills__list
+							+skillCircle('skills', '50"', 'Git')
+							+skillCircle('skills', '50"', 'Gulp')
+							+skillCircle('skills', '50"', 'NPM & Bower')
 
-		//- 	.skills
-		//- 		h2.headline2 Чем я могу быть<br>вам полезен
-		//- 		p.text
-		//- 		.skills__circles
-		//- 			.skills__frontend
-		//- 			.skills__backend
-		//- 			.skills__workflow
-
-		//- 	.contacts
-		//- 		.contacts__info
-		//- 			h1.headline
-		//- 			ul.contacts__list
-		//- 				li.contacts__item
-		//- 				li.contacts__item
-		//- 				li.contacts__item
-		//- 				li.contacts__item
-		//- 	+footer
-
-	section.map
+	section.section-map
+		#map.map
+		script(src='https://maps.googleapis.com/maps/api/js?callback=map.init' async defer)
 		.contacts
 			+section-headline2('Контакты')
 			ul.contacts__list
@@ -103,4 +83,3 @@ block content
 				li.contacts__item
 					span.contacts__icon <i class="fa fa-map-marker" aria-hidden="true"></i>
 					| г. Краснодар
-	include footer.pug

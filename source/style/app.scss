@@ -1,10 +1,24 @@
 @import 'common/fonts';
 @import 'common/mixins';
 
+// Footer
+
+$footer_height_desktop: 147px;
+$footer_height_tablet: 240px;
+$footer_height_phone: 270px;
+
 $textColor: #455a64;
 $accentColor: #00bfa5;
 $hoverColor: #009688;
 $font-family: 'robotoregular', Arial, Helvetica, sans-serif;
+
+// Skill Circles
+$skill_circle_diameter: 110px;
+$skill_circle_stroke: 20px;
+
+$color_skills_inner: #16c1a9;
+$color_skills_outer_bg: #dfdcd5;
+$color_skills_outer: #eeebdf;
 
 %clearfix {
 	&:before {
@@ -31,9 +45,13 @@ html {
   font: 16PX $font-family;
   color: $textColor;
 
-  @include phone {
-  	font-size: 14PX;
-  }
+	@include tablet {
+		font-size: 14PX;
+	}
+
+	// @include phone {
+	// 	font-size: 14PX;
+	// }
 }
 
 body {
@@ -54,6 +72,26 @@ a {
 	text-decoration: none;
 	font-family: $font-family;
 	color: $textColor;
+}
+
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	position: relative;
+
+	.map,
+	.blog,
+	.testimonials {
+		padding-bottom: $footer_height_desktop;
+
+		@include tablet {
+			padding-bottom: $footer_height_tablet;
+		}
+
+		@include phone {
+			padding-bottom: $footer_height_phone;
+		}
+	}
 }
 
 .text {
@@ -103,7 +141,6 @@ a {
 	font-family: 'bernier_regularregular', 'robotoregular', Arial, sans-serif;
 	color: $textColor;
 	text-transform: uppercase;
-	font-size: 35px;
 	max-width: 300px;
 	line-height: 1;
 
@@ -135,6 +172,26 @@ a {
 .section-headline__inner1 {
 	font-size: 63px;
 	color: #373e42;
+
+	@include tablet {
+		font-size: 49px;
+	}
+
+	@include phone {
+		font-size: 35px;
+	}
+}
+
+.section-headline__inner2 {
+	font-size: 35px;
+
+	@include tablet {
+		font-size: 30px;
+	}
+
+	@include phone {
+		font-size: 21px;
+	}
 }
 
 // Конец заголовка со штрихами
@@ -168,11 +225,7 @@ a {
 
 .social__link {
 	color: #fff;
-	// opacity: 0.5;
-
-	// &:hover {
-	// 	opacity: 1;
-	// }
+	display: block;
 }
 
 @import 'pages/index';

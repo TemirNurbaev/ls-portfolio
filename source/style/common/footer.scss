@@ -1,8 +1,20 @@
 .footer {
+	position: relative;
 	width: 100%;
-	height: 147px;
+	height: $footer_height_desktop;
 	background-color: rgba(55, 62, 66, 0.85);
+	margin-top: -$footer_height_desktop;
 	@extend %clearfix;
+
+	@include tablet {
+		height: $footer_height_tablet;
+		margin-top: -$footer_height_tablet;
+	}
+
+	@include phone {
+		height: $footer_height_phone;
+		margin-top: -$footer_height_phone;
+	}
 }
 
 .footer__top {
@@ -10,12 +22,25 @@
 	height: 73px;
 	border-bottom: 1px solid #656b6e;
 	@extend %clearfix;
+
+	@include tablet {
+		height: $footer_height_tablet/2 - 1px;
+		padding-top: 30px;
+		text-align: center;
+	}
 }
 
 .footer__menu-list {
 	float: left;
 	text-align: left;
 	padding-left: 30px;
+
+	@include tablet {
+		float: none;
+		text-align: center;
+		padding-left: 0;
+		// margin: 0 auto;
+	}
 }
 
 .footer__menu-item {
@@ -25,6 +50,14 @@
 
 	&:first-child {
 		margin-left: 0;
+	}
+
+	@include tablet {
+		line-height: 1;
+	}
+
+	@include phone {
+		margin-left: 10px;
 	}
 }
 
@@ -41,6 +74,12 @@
 	float: right;
 	padding-right: 30px;
 	padding-top: 17px;
+
+	@include tablet {
+		float: none;
+		padding-right: 0px;
+		padding-top: 20px;
+	}
 }
 
 .social_footer .social__item {
@@ -64,7 +103,11 @@
 }
 
 .footer__bottom {
-	// @extend %clearfix;
+	padding: 0 10PX;
+
+	@include tablet {
+		text-align: center;
+	}
 }
 
 .footer__descr {
@@ -75,6 +118,11 @@
 	opacity: 0.5;
 	font: 16px 'robotolight', Aril, sans-serif;
 	float: left;
+
+	@include tablet {
+		float: none;
+		margin: 0 auto;
+	}
 }
 
 .footer__copyright {
@@ -84,4 +132,10 @@
 	float: right;
 	line-height: 73px;
 	padding-right: 30px;
+
+	@include tablet {
+		float: none;
+		padding-right: 0;
+		margin: 0 auto;
+	}
 }

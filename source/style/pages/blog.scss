@@ -1,7 +1,3 @@
-.header__triangle_white svg {
-	fill: #fff;
-}
-
 .section-headline__inner1_white {
 	color: #fff;
 
@@ -18,11 +14,9 @@
 }
 
 .blog__nav {
-	width: 270px;
+	width: 25%;
 	float: left;
-	// margin-right: 95px;
 	display: inline-block;
-	// @extend %clearfix;
 }
 
 .blog__nav-list {
@@ -34,14 +28,22 @@
 }
 
 .blog__nav-link {
+	display: block;
+	padding-right: 20px;
+}
+
+.blog__nav-item.active {
 	
+	.blog__nav-link {
+		color: $accentColor;
+		border-right: 3px solid;
+	}
 }
 
 .blog__articles {
 	float: left;
-	width: 60%;
-	margin-left: 95px;
-	// @extend %clearfix;
+	width: 57%;
+	margin-left: 100px;
 }
 
 .article {

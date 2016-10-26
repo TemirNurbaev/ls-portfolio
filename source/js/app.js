@@ -7,9 +7,9 @@
 // })();
 
 
-$(document).ready(function(){
-	$(".auth-link").on('click', function(){
-    	S(".flipper").css("transform", "rotateY(180deg)");
-	});
+// $(document).ready(function(){
+// 	$(".auth-link").on('click', function(){
+//     	S(".flipper").css("transform", "rotateY(180deg)");
+// 	});
 
-});
+// });
