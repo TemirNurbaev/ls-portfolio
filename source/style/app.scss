@@ -20,6 +20,14 @@ $color_skills_inner: #16c1a9;
 $color_skills_outer_bg: #dfdcd5;
 $color_skills_outer: #eeebdf;
 
+// Works Page Colors
+$color_slider_bg: #f0efe9;
+$color_slider_right: #efebe0;
+$color_slider_left: #f0efe9;
+$color_slider_skills: #20b5a1;
+$slider_preview_hover: #b6b4ae;
+
+
 %clearfix {
 	&:before {
 		content: " ";
@@ -72,6 +80,11 @@ a {
 	text-decoration: none;
 	font-family: $font-family;
 	color: $textColor;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
 }
 
 .wrapper {

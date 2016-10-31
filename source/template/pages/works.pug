@@ -35,25 +35,87 @@ block content
 			.section-headline__inner1.section-headline__inner1_works Мои работы
 
 	.slider
-		.table
-			.row.row_slider
-				.cell.cell_left
-					.slider__descr-container
-						.slider__descr
-							.section-headline2
-								.section-headline__inner2.section-headline__inner2_slider Сайт школы онлайн образования
-							.slider__descr-tags
-								p.slider__descr-tags-inner HTML, CSS, JAVASCRIPT
-							button.slider__button
-								span.slider__button-icon <i class="fa fa-link" aria-hidden="true"></i>
-								| Посмотреть сайт
-				.cell.cell_right
-					.slider__images
-						.slider__big-image
-							img.slider__display-image(src="assets/img/works_item_1.png")
-						.slider__list
-							a.slider__control.slider__control_prev
-							a.slider__control.slider__control_next
+		.slider__left
+			.slider__display
+				.slider__list
+					.slider__item.slider__item_active
+						img.slider__img(src="assets/img/slide-1.png" alt="")
+					.slider__item
+						img.slider__img(src="assets/img/slide-2.png" alt="")
+					.slider__item
+						img.slider__img(src="assets/img/slide-3.png" alt="")
+					.slider__item
+						img.slider__img(src="assets/img/slide-4.png" alt="")
+					.slider__item
+						img.slider__img(src="assets/img/slide-5.png" alt="")
+			.slider__info
+				.slider__item-info.slider__item-info_active
+					.section-headline2
+						.section-headline__inner2 Сайт школы онлайн образования
+					.slider__skills HTML, CSS, JAVASCRIPT
+					.slider__button
+						a(target="_blank" href="#")
+							span.slider__button-icon <i class="fa fa-link" aria-hidden="true"></i>
+							| Посмотреть сайт
+				.slider__item-info
+					.section-headline2
+						.section-headline__inner2 Сайт курса по уходу за волосами
+					.slider__skills HTML, CSS
+					.slider__button
+						a(target="_blank" href="#")
+							span.slider__button-icon <i class="fa fa-link" aria-hidden="true"></i>
+							| Посмотреть сайт
+				.slider__item-info
+					.section-headline2
+						.section-headline__inner2 Сайт школы онлайн образования 2
+					.slider__skills HTML, CSS, JAVASCRIPT
+					.slider__button
+						a(target="_blank" href="#")
+							span.slider__button-icon <i class="fa fa-link" aria-hidden="true"></i>
+							| Посмотреть сайт
+				.slider__item-info
+					.section-headline2
+						.section-headline__inner2 Сайт школы онлайн образования 3
+					.slider__skills HTML, CSS, JAVASCRIPT
+					.slider__button
+						a(target="_blank" href="#")
+							span.slider__button-icon <i class="fa fa-link" aria-hidden="true"></i>
+							| Посмотреть сайт
+				.slider__item-info
+					.section-headline2
+						.section-headline__inner2 Сайт школы онлайн образования 4
+					.slider__skills HTML, CSS, JAVASCRIPT
+					.slider__button
+						a(target="_blank" href="#")
+							span.slider__button-icon <i class="fa fa-link" aria-hidden="true"></i>
+							| Посмотреть сайт
+					
+		.slider__right
+			.slider__controls
+
+				a(href="#").slider__control.slider__control_prev
+					span.control__item
+						img.control__img(src="assets/img/slide-1.png" alt="")
+					span.control__item
+						img.control__img(src="assets/img/slide-2.png" alt="")
+					span.control__item
+						img.control__img(src="assets/img/slide-3.png" alt="")
+					span.control__item
+						img.control__img(src="assets/img/slide-4.png" alt="")
+					span.control__item
+						img.control__img(src="assets/img/slide-5.png" alt="")
+
+				a(href="#").slider__control.slider__control_next
+					span.control__item.control__item_active
+						img.control__img(src="assets/img/slide-1.png" alt="")
+					span.control__item
+						img.control__img(src="assets/img/slide-2.png" alt="")
+					span.control__item
+						img.control__img(src="assets/img/slide-3.png" alt="")
+					span.control__item
+						img.control__img(src="assets/img/slide-4.png" alt="")
+					span.control__item
+						img.control__img(src="assets/img/slide-5.png" alt="")
 							
 
 	.testimonials
